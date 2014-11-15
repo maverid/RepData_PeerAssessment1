@@ -6,7 +6,7 @@ In this document I am going to make the Peer Assessment of the Course of Courser
 ## Loading and preprocessing the data
 
 ```r
-knitr::opts_chunk$set(tidy=FALSE, fig.path='figures/')
+knitr::opts_chunk$set(tidy=FALSE, fig.path='figure/')
 
 file <- unzip("activity.zip")
 data <- read.csv(file)
@@ -32,7 +32,7 @@ stepsbydate <- aggregate(steps ~ date, data = data, FUN=sum)
 barplot(stepsbydate$steps, main ="Number of steps taken per day", names.arg=stepsbydate$date)
 ```
 
-![plot of chunk steps](figures/steps.png) 
+![plot of chunk steps](figure/steps.png) 
 
 Now we are going to calculate the mean and the median of steps per day
 
@@ -49,7 +49,7 @@ stepsbyinterval <- aggregate(steps ~ interval, data = data, FUN=mean)
 plot(x=stepsbyinterval$interval, stepsbyinterval$steps, main ="Daily activity pattern", type="l")
 ```
 
-![plot of chunk interval](figures/interval.png) 
+![plot of chunk interval](figure/interval.png) 
 
 
 ```r
@@ -80,7 +80,7 @@ stepscompletebydate <- aggregate(steps ~ date, data = datacomplete, FUN=sum)
 barplot(stepscompletebydate$steps, main ="Number of steps taken per day with NA filled", names.arg=stepscompletebydate$date)
 ```
 
-![plot of chunk stepscompletes](figures/stepscompletes.png) 
+![plot of chunk stepscompletes](figure/stepscompletes.png) 
 
 
 ```r
@@ -117,7 +117,7 @@ for (type in c("weekend", "weekday")) {
 }
 ```
 
-![plot of chunk graphicsday](figures/graphicsday.png) 
+![plot of chunk graphicsday](figure/graphicsday.png) 
 
 
 

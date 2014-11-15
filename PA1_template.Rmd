@@ -10,7 +10,7 @@ In this document I am going to make the Peer Assessment of the Course of Courser
 
 ## Loading and preprocessing the data
 ```{r loading, echo=TRUE}
-knitr::opts_chunk$set(tidy=FALSE, fig.path='figures/')
+knitr::opts_chunk$set(tidy=FALSE, fig.path='figure/')
 
 file <- unzip("activity.zip")
 data <- read.csv(file)
