@@ -1,29 +1,22 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 In this document I am going to make the Peer Assessment of the Course of Coursera Reproducible Research.
 
 
 ## Loading and preprocessing the data
-```{r loading, echo=TRUE}
-file <- unzip("activity.zip")
-data <- read.csv(file)
 
-head(data)
+```r
+x <- 5+2
+x
+```
+
+```
+## [1] 7
 ```
 
 
 ## What is mean total number of steps taken per day?
-```{r steps, echo=TRUE}
-stepsbydate <- aggregate(steps ~ date, data = data, FUN=sum, na.rm=TRUE)
-mean(stepsbydate$steps)
-quartile(stepsbydate$steps, probs = 0.5)
 
-```
 
 
 ## What is the average daily activity pattern?
